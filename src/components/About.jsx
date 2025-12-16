@@ -21,7 +21,7 @@ export default function About() {
       >
         {/* Image */}
         <motion.img
-          src="/public/assets/about.png"
+          src="/assets/about.png"
           alt="about"
           className="w-full md:w-1/2 rounded-lg"
           initial={{ x: -50, opacity: 0 }}

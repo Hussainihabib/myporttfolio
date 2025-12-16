@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [activeSection, setActiveSection] = useState("#home");
 
   // Detect screen width for responsive menu button
   useEffect(() => {
@@ -17,6 +18,25 @@ export default function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Scroll event to track active section
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+
+    const onScroll = () => {
+      let current = "#home";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 120;
+        if (window.scrollY >= sectionTop) {
+          current = `#${section.id}`;
+        }
+      });
+      setActiveSection(current);
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   // Smooth scroll handler
   const handleScroll = (e, target) => {
     e.preventDefault();
@@ -24,8 +44,18 @@ export default function Header() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
       setOpen(false);
+      setActiveSection(target); // also set on click
     }
   };
+
+  const links = [
+    { href: "#home", label: "Home" },
+    { href: "#about", label: "About" },
+    { href: "#skills", label: "Skills" },
+    { href: "#portfolio", label: "Portfolio" },
+    { href: "#resume", label: "Resume" },
+    { href: "#contact", label: "Contact" },
+  ];
 
   return (
     <motion.header
@@ -62,13 +92,36 @@ export default function Header() {
           borderRadius: isMobile ? "12px" : "0",
         }}
       >
-        <a href="#home" onClick={(e) => handleScroll(e, "#home")}>Home</a>
-        <a href="#about" onClick={(e) => handleScroll(e, "#about")}>About</a>
-
-        <a href="#skills" onClick={(e) => handleScroll(e, "#skills")}>Skills</a>
-        <a href="#portfolio" onClick={(e) => handleScroll(e, "#portfolio")}>Portfolio</a>
-        <a href="#resume" onClick={(e) => handleScroll(e, "#resume")}>Resume</a>
-        <a href="#contact" onClick={(e) => handleScroll(e, "#contact")}>Contact</a>
+        {links.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            onClick={(e) => handleScroll(e, link.href)}
+            className={activeSection === link.href ? "active" : ""}
+            style={{
+              color: activeSection === link.href ? "var(--accent)" : "var(--text-muted)",
+              position: "relative",
+              fontWeight: 500,
+              textDecoration: "none",
+              transition: "color 0.3s",
+            }}
+          >
+            {link.label}
+            {/* Underline for active */}
+            <span
+              style={{
+                position: "absolute",
+                left: 0,
+                bottom: -6,
+                height: 2,
+                width: activeSection === link.href ? "100%" : "0",
+                background: "var(--accent)",
+                borderRadius: 2,
+                transition: "width 0.3s ease",
+              }}
+            />
+          </a>
+        ))}
       </nav>
 
       {/* Mobile Menu Button */}

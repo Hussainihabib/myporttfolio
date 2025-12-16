@@ -55,7 +55,7 @@ export default function Contact() {
           {/* FIXED BUTTON */}
           <motion.button
             type="submit"
-            className="btn-primary"
+            className="btn-change" 
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.96 }}
           >
@@ -83,14 +83,14 @@ export default function Contact() {
 
           {/* SOCIAL ICONS MOVED HERE */}
           <div className="info-socials">
-            <a href="https://linkedin.com" className="info-item" target="_blank" rel="noreferrer">  Link Dn
-              <FaLinkedinIn />
+            <a href="https://www.linkedin.com/in/habib-hussaini-a3b78839a/" className="info-item" target="_blank" rel="noreferrer">  
+              <FaLinkedinIn />Linkedin
             </a>
-            <a href="https://github.com/Hussainihabib" className="info-item" target="_blank" rel="noreferrer">  Github
-              <FaGithub />
+            <a href="https://github.com/Hussainihabib" className="info-item" target="_blank" rel="noreferrer">  
+              <FaGithub />Github
             </a>
-            <a href="https://facebook.com" className="info-item" target="_blank" rel="noreferrer">   Facebook
-              <FaFacebookF />
+            <a href="https://www.facebook.com/habib.hussaini.54584" className="info-item" target="_blank" rel="noreferrer">  
+              <FaFacebookF /> Facebook
             </a>
           </div>
         </div>
