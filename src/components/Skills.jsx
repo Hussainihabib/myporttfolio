@@ -47,7 +47,7 @@ export default function Skills() {
             frontend technologies.
           </p>
 
-          <div className="card-tags">
+          <div className="skill-tags">
             <span>React</span>
             <span>HTML</span>
             <span>CSS</span>
@@ -75,7 +75,7 @@ export default function Skills() {
             Creating secure and scalable server-side applications and APIs.
           </p>
 
-          <div className="card-tags">
+          <div className="skill-tags">
             <span>Node.js</span>
             <span>Express</span>
             <span>REST API</span>
@@ -100,8 +100,10 @@ export default function Skills() {
             Designing efficient databases focused on performance and reliability.
           </p>
 
-          <div className="card-tags">
+          <div className="skill-tags" >
             <span>MySQL</span>
+            <span>SQL server</span>
+            <span>Firebase</span>
             <span>MongoDB</span>
           </div>
         </motion.div>
@@ -123,7 +125,7 @@ export default function Skills() {
             Tools and platforms used for version control, design, and deployment.
           </p>
 
-          <div className="card-tags">
+          <div className="skill-tags">
             <span>Git</span>
             <span>GitHub</span>
             <span>Postman</span>

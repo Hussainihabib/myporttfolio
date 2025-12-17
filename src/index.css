@@ -32,18 +32,22 @@ body{
   --border:#e5e7eb;
   --accent:#000000;
 }
-
 [data-theme="dark"]{
   /* DARK */
   --bg-main:#05050c;
   --bg-card:#0f1724;
   --bg-soft:#0b1220;
-  --text-main:#e9eef6;
+  --text-main:#dbe4f5;
   --text-muted:#9aa3b2;
   --border:rgba(255,255,255,0.08);
-  --accent:#ffd35a;
+  --accent: linear-gradient(
+    135deg,
+    rgba(56, 189, 248, 0.85),
+    rgba(38, 162, 241, 0.9),
+    rgba(14, 117, 232, 1)
+  );
+  --text-accent: var(--accent);
 }
-
 /* ======================================================
    COMMON
 ====================================================== */
@@ -56,7 +60,9 @@ body{
   font-size:28px;
   font-weight:700;
   letter-spacing:4px;
-  color:var(--accent);
+    background: var(--text-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom:60px;
 }
 
@@ -84,7 +90,9 @@ body{
 .logo{
   font-size:22px;
   font-weight:800;
-  color:var(--accent);
+  background: var(--text-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .header nav{
@@ -114,7 +122,9 @@ body{
 
 /* hover */
 .header nav a:hover{
-  color:var(--accent);
+    background: var(--text-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .header nav a:hover::after{
@@ -123,7 +133,9 @@ body{
 
 /* 🔥 ACTIVE LINK */
 .header nav a.active{
-  color: var(--accent);
+    background: var(--text-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .header nav a.active::after{
@@ -154,6 +166,9 @@ body{
   font-size:64px;
   line-height:1.1;
   margin:10px 0;
+    background: var(--text-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-text .role{
@@ -181,7 +196,9 @@ body{
 }
 
 .hero-buttons .primary{
-  background:var(--accent);
+    background: var(--text-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   color:#000;
 }
 
@@ -206,7 +223,11 @@ body{
   gap: 60px;
   align-items: center;
 }
-
+#aboutcolor{
+    background: var(--text-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 /* Image */
 .about-container img{
   width: 100%;
@@ -301,7 +322,7 @@ body{
 /* Individual Card */
 .skill-card {
   background-color: #111; /* Dark black background */
-  border-top: 4px solid var(--accent); /* Gold accent top border */
+  border-top: 4px solid var(--text-accent); /* Gold accent top border */
   border-radius: 1rem;
   padding: 26px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow */
@@ -312,7 +333,7 @@ body{
 .skill-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
-  border-color: var(--accent); /* Gold accent hover */
+  border-color: var(--accent);
 }
 
 /* Card Headings */
@@ -320,7 +341,9 @@ body{
 .skill-card h4 {
   font-size: 20px;
   font-weight: 700;
-  color: var(--accent); /* Gold heading */
+    background: var(--text-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 12px;
 }
 
@@ -338,9 +361,9 @@ body{
   padding: 6px 12px;
   border-radius: 9999px;
   font-size: 0.75rem;
+  background: var(--text-muted);
   font-weight: 600;
-  margin: 4px 4px 0 0;
-  background-color:var(--accent); /* White background for tags */
+  margin: 4px 4px 0 0;/* White background for tags */
   color: #111; /* Black text */
   transition: transform 0.2s, background-color 0.2s;
 }
@@ -362,7 +385,7 @@ body{
 /* Card Icons */
 .skill-card .card-header .card-icon {
   font-size: 2.2rem;
-  color: var(--accent); /* Gold icons using CSS variable */
+   color: var(--accent);
 }
 
 /* Tags / Badges */
@@ -375,11 +398,10 @@ body{
 .skill-card .skill-tag {
   display: inline-flex;
   align-items: center;
+  color:#000;
   gap: 4px;
   padding: 4px 10px;
   border-radius: 9999px;
-  background-color: #ffffff; /* White background for badges */
-  color: #111; /* Black text */
   font-size: 12px;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -428,8 +450,8 @@ body{
     var(--bg-card),
     var(--bg-soft)
   );
-  border-top: 4px solid var(--accent);
-  border-left: 4px solid var(--accent);
+  border-top: 4px solid var(--text-muted);
+  border-left: 4px solid var(--text-muted);
 
   border-radius: 18px;
 
@@ -442,9 +464,9 @@ body{
 .resume-card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow:
-    0 24px 50px rgba(0, 0, 0, 0.75),
-    0 0 0 1px rgba(255, 211, 90, 0.35),
-    0 0 30px rgba(255, 211, 90, 0.18);
+    0 24px 50px rgba(164, 164, 164, 0.75),
+    0 0 0 1px rgba(102, 216, 253, 0.35),
+    0 0 30px rgba(90, 211, 255, 0.18);
   cursor: default;
 
 }
@@ -453,7 +475,9 @@ body{
 .resume-card h4 {
   font-size: 20px;
   font-weight: 700;
-  color: var(--accent);
+   background: var(--text-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 14px;
 }
 
@@ -514,7 +538,7 @@ body{
   flex-direction: column;
   justify-content: space-between; /* content top, buttons bottom */
 
-  border: 1px solid var(--border);
+  border: 1px solid var(--text-muted);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
   transition: all 0.35s ease;
 }
@@ -546,7 +570,9 @@ body{
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
-  color: var(--text-main);
+    background: var(--text-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Description */
@@ -600,7 +626,7 @@ body{
 }
 
 .card-tags span {
-  background: #ffcf55;
+   background: var(--text-muted);
   color: #000;
   padding: 6px 14px;
   border-radius: 999px;
@@ -614,25 +640,26 @@ body{
   gap: 14px;
   margin-top: 30px;
 }
-
 .btn-primary {
-  background: #ffcf55;
+  background: var(--accent);
   color: #000;
-  padding: 14px 26px;
-  border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #14a0f0;
+  color: #fff;
 }
 
 .btn-outline {
-  border: 2px solid #ffcf55;
-  color: #ffcf55;
-  padding: 14px 26px;
-  border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
 }
 
+.btn-outline:hover {
+  background: var(--accent);
+  color: #000;
+}
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 1024px) {
@@ -692,7 +719,7 @@ body{
   flex-direction: column;
   justify-content: space-between; /* content top, buttons bottom */
 
-  border: 1px solid var(--border);
+  border: 1px solid var(--text-muted);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 
   transition: all 0.4s ease;
@@ -728,7 +755,7 @@ body{
 /* Buttons */
 .btn-primary,
 .btn-outline {
-  padding: 8px 8px;  /* smaller size */
+  padding: 8px 16px;  /* smaller size */
   font-weight: 600;
   border-radius: 8px;
   text-decoration: none;
@@ -754,13 +781,12 @@ body{
   font-weight: 600;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.06);
-  color: var(--accent);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.12);
   transition: all 0.25s ease;
 }
 
 .tech-tag:hover {
-  background: var(--accent);
+  background: var(--text-muted);
   color: #000;
   transform: translateY(-2px);
 }
@@ -772,12 +798,12 @@ body{
 }
 
 .btn-primary:hover {
-  background: #ffd35a;
+    background: #14a0f0;
 }
 
 .btn-outline {
   background: transparent;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--text-muted);
   color: var(--accent);
   column-gap: 20px;
 
@@ -846,15 +872,7 @@ body{
   grid-column:span 2;
 }
 
-.btn-primary{
-  background:var(--accent);
-  color:#000;
-  border:none;
-  border-radius:30px;
-  padding:14px;
-  font-weight:600;
-  cursor:pointer;
-}
+
 
 /* ======================================================
    RESPONSIVE (MOST IMPORTANT)
@@ -914,11 +932,17 @@ body{
   );
   padding: 30px;
   border-radius: 20px;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--text-muted);
   box-shadow: 0 12px 30px rgba(0,0,0,0.5);
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+.contact-form h4{
+  font-size: 20px;
+  background: var(--text-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* INPUTS */
@@ -926,7 +950,7 @@ body{
   width: 100%;
   padding: 14px 16px;
   border-radius: 10px;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--text-muted);
   background: var(--bg-soft);
   color: var(--text-primary);
   font-size: 14px;
@@ -939,7 +963,7 @@ body{
 
 .input:focus {
   outline: none;
-  border-color: var(--accent);
+  border-color: var(--text-muted);
 }
 
 /* BUTTONS + SOCIALS */
@@ -954,11 +978,11 @@ body{
 
 .btn-primary {
   flex: 1;
-  padding: 14px 26px;
+  padding: 10px 26px;
   border-radius: 999px;
   background: var(--accent);
   color: #000;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   border: none;
   cursor: pointer;
@@ -966,7 +990,8 @@ body{
 }
 
 .btn-primary:hover {
-  background: #ffe28a;
+  color:#000;
+  background: var(--text-muted);
 }
 
 .form-socials {
@@ -987,7 +1012,7 @@ body{
 }
 
 .form-socials a:hover {
-  background: var(--accent);
+  background: var(--text-muted);
   color: #000;
   transform: translateY(-3px);
 }
@@ -1009,7 +1034,7 @@ body{
   );
   padding: 30px;
   border-radius: 20px;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--text-muted);
   box-shadow: 0 12px 30px rgba(0,0,0,0.5);
   display: flex;
   flex-direction: column;
@@ -1018,33 +1043,38 @@ body{
 
 .contact-info h4 {
   font-size: 20px;
-  color: var(--text-main);
+  background: var(--text-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .info-item {
   display: flex;
   align-items: center;
-  gap: 20px ;
+  gap: 30px ;
   color: var(--text-primary);
   font-size: 16px;
   text-decoration: none;
 }
 
 .info-item svg {
-  color: var(--accent);
-  font-size: 14px;
+ background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 43px;
+  padding : 10px;
 }
 
 /* ===================== SOCIAL BOX ===================== */
 .contact-socials {
-  background: var(--bg-card);
+  background: var(--text-muted);
   border-radius: 16px;
   padding: 30px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 16px;
+  gap: 30px;
 }
 
 .contact-socials h4 {
@@ -1055,25 +1085,27 @@ body{
 /* Icons */
 .social-icons {
   display: flex;
-  gap: 16px;
+  gap: 30px;
 }
 
 .social-icon {
   width: 46px;
+  color: #000;
   height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   background: transparent;
-  border: 1px solid var(--accent);
-  color: var(--accent);
+  border: 1px solid var(--text-muted);
+  background: var(--accent);
+  
   font-size: 18px;
   transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-  background: var(--accent);
+  background: var(--text-muted);
   color: #000;
   transform: translateY(-4px);
 }
@@ -1083,7 +1115,9 @@ body{
   margin-top: 40px;
   text-align: center;
   font-size: 14px;
-  color: var(--accent);
+  background: var(--text-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* ===================== RESPONSIVE ===================== */

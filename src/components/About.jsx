@@ -37,25 +37,19 @@ export default function About() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h3 className="text-2xl font-bold mb-2">Habib Hussaini</h3>
-          <div className="role mb-4">MERN Stack Developer</div>
+          <div className="role mb-4" id="aboutcolor">MERN Stack Developer</div>
 
           <p className="mb-4">
-            I am a motivated and detail-oriented MERN Stack Developer with
-            hands-on expertise in building scalable web applications, RESTful
-            APIs, and responsive user interfaces. I specialize in modern
-            JavaScript frameworks and take pride in writing clean, maintainable,
-            and efficient code that delivers strong, reliable user experiences.
+            I am a dedicated MERN Stack Developer focused on building modern, scalable, and user-centric web applications. With strong hands-on experience in developing RESTful APIs and responsive front-end interfaces, I enjoy transforming ideas into efficient and reliable digital solutions.
             <br /><br />
-            Beyond coding, I enjoy exploring emerging technologies,
-            contributing to open-source projects, and sharing insights through
-            technical content. I believe in continuous growth, constant
-            improvement, and pushing the boundaries of what’s possible on the web.
+          
+I have a strong interest in clean code, performance optimization, and modern development practices. I continuously work on improving my skills by exploring new technologies, building real-world projects, and learning from the developer community. I believe consistency, curiosity, and continuous improvement are key to creating impactful web experiences
           </p>
 
           <div className="meta-grid grid grid-cols-2 gap-4 mb-6">
-            <div><strong>Email:</strong> <span>habib033hussaini@gmail.com</span></div>
-            <div><strong>Phone:</strong> <span>03703242401</span></div>
-            <div><strong>Location:</strong> <span>Malir karachi</span></div>
+            <div><strong id="aboutcolor">Email:</strong> <span>habib033hussaini@gmail.com</span></div>
+            <div><strong id="aboutcolor">Phone:</strong> <span>03703242401</span></div>
+            <div><strong id="aboutcolor">Location:</strong> <span>Malir karachi</span></div>
           </div>
 <div className="hero-buttons">
   <motion.a

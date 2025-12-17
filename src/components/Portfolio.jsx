@@ -5,7 +5,7 @@ export default function Portfolio() {
   const projects = [
     {
       title: "Al Hussaini Garments",
-      description: "HTML, CSS & JavaScript based business website.",
+      description: "A responsive garments website built using HTML, CSS, and JavaScript, showcasing products, designs, and brand details with a clean and user-friendly interface.",
       image: "/assets/ecommerce.png",
       codeLink: "https://github.com/Hussainihabib",
       demoLink: "https://hussainihabib.github.io/HABIB-HUSSAINI/",
@@ -13,7 +13,7 @@ export default function Portfolio() {
     },
     {
       title: "Mern_Fitness Tracker",
-      description: "Track Your fitness journey",
+      description: "A full-stack MERN fitness tracker that helps users monitor workouts, track progress, and maintain a healthy lifestyle through a clean, responsive, and user-friendly interface.",
       image: "/assets/dashboard.png",
       codeLink: "https://github.com/Hussainihabib",
       demoLink: "https://fitnesstracker-beta-five.vercel.app",
@@ -21,7 +21,7 @@ export default function Portfolio() {
     },
     {
       title: "Nexus Aquarium",
-      description: "Interactive frontend aquarium experience built with modern UI techniques.",
+      description: "Nexus Aquarium is a responsive aquarium website built using HTML, CSS, JavaScript, and Bootstrap, designed to showcase aquatic products and services with a clean, modern interface.",
       image: "/assets/portfolio.png",
       codeLink: "https://github.com/Hussainihabib",
       demoLink: "https://hussainihabib.github.io/aquariuamweb/index.html",

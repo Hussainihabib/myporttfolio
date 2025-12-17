@@ -37,11 +37,14 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section">
-      <h2 className="section-title">CONTACT</h2>
+      <h2 className="section-title">GET IN TOUCH</h2>
 
       <div className="contact-wrapper">
+        
         {/* ================= FORM ================= */}
         <form ref={form} className="contact-form" onSubmit={sendEmail}>
+          <h4>Contact</h4>
+
           <input name="user_name" placeholder="Your Name" className="input" />
           <input name="user_email" placeholder="Your Email" className="input" />
           <input name="subject" placeholder="Subject" className="input full" />
