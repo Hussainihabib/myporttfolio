@@ -27,6 +27,14 @@ export default function Portfolio() {
       demoLink: "https://hussainihabib.github.io/aquariuamweb/index.html",
       tech: ["Html", "Javascript", "CSS","Bootstrap"],
     },
+    {
+      title: "Watch Hub App",
+      description: "WatchHub is a modern mobile app for exploring and purchasing premium watches, offering a smooth user experience with elegant designs and seamless shopping.",
+      image: "/assets/watch.png",
+      codeLink: "https://github.com/Hussainihabib",
+      demoLink: "https://watchhubapp.vercel.app/",
+      tech: ["Flutter", "Firebase"],
+    },
   ];
 
   return (

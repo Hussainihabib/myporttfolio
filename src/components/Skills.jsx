@@ -77,6 +77,7 @@ export default function Skills() {
 
           <div className="skill-tags">
             <span>Node.js</span>
+            <span>Dart</span>
             <span>Express</span>
             <span>REST API</span>
             <span>JWT</span>
