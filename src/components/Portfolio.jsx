@@ -17,7 +17,8 @@ export default function Portfolio() {
       image: "/assets/dashboard.png",
       codeLink: "https://github.com/Hussainihabib",
       demoLink: "https://fitnesstracker-beta-five.vercel.app",
-      tech: ["React+Vite", "Express.js", "Monogdb-Atlas","Node.js","Material UI"],
+      tech: ["React+Vite", "Express.js", "MongoDB Atlas"
+,"Node.js","Material UI"],
     },
     {
       title: "Nexus Aquarium",
@@ -25,7 +26,8 @@ export default function Portfolio() {
       image: "/assets/portfolio.png",
       codeLink: "https://github.com/Hussainihabib",
       demoLink: "https://hussainihabib.github.io/aquariuamweb/index.html",
-      tech: ["Html", "Javascript", "CSS","Bootstrap"],
+      tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+
     },
     {
       title: "Watch Hub App",

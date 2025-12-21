@@ -53,7 +53,8 @@ export default function Skills() {
             <span>CSS</span>
             <span>Tailwind</span>
             <span>Bootstrap</span>
-            <span>Material UI</span>
+         <span>Material UI (MUI)</span>
+
             <span>JavaScript</span>
           </div>
         </motion.div>
@@ -77,7 +78,6 @@ export default function Skills() {
 
           <div className="skill-tags">
             <span>Node.js</span>
-            <span>Dart</span>
             <span>Express</span>
             <span>REST API</span>
             <span>JWT</span>
@@ -103,7 +103,7 @@ export default function Skills() {
 
           <div className="skill-tags" >
             <span>MySQL</span>
-            <span>SQL server</span>
+            <span>SQL Server</span>
             <span>Firebase</span>
             <span>MongoDB</span>
           </div>

@@ -1,7 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Hero() {
+
+  const roles = [
+    "Full Stack Developer",
+    "MERN Stack Developer",
+    "Frontend Developer",
+  ];
+
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [displayText, setDisplayText] = useState("");
+  const [charIndex, setCharIndex] = useState(0);
+
+  useEffect(() => {
+    const currentRole = roles[roleIndex];
+
+    if (charIndex < currentRole.length) {
+      const typingTimeout = setTimeout(() => {
+        setDisplayText((prev) => prev + currentRole.charAt(charIndex));
+        setCharIndex((prev) => prev + 1);
+      }, 80); // typing speed
+
+      return () => clearTimeout(typingTimeout);
+    } else {
+      const pauseTimeout = setTimeout(() => {
+        setDisplayText("");
+        setCharIndex(0);
+        setRoleIndex((prev) => (prev + 1) % roles.length);
+      }, 1500); // pause after full text
+
+      return () => clearTimeout(pauseTimeout);
+    }
+  }, [charIndex, roleIndex]);
 
   const scrollToContact = () => {
     document.querySelector("#contact")?.scrollIntoView({
@@ -12,7 +43,6 @@ export default function Hero() {
   return (
     <section id="home" className="hero">
 
-      {/* Text Section */}
       <motion.div
         className="hero-text"
         initial={{ x: -50, opacity: 0 }}
@@ -21,7 +51,14 @@ export default function Hero() {
       >
         <h5>Hello, I'm</h5>
         <h1>Habib Hussaini</h1>
-        <div className="role">Full Stack Developer</div>
+
+        {/* 🔥 TYPING EFFECT */}
+        <div className="role">
+          <span className="typing">
+            {displayText}
+            <span className="cursor">|</span>
+          </span>
+        </div>
 
         <p className="hero-desc">
           I build clean, scalable and professional web applications using
@@ -48,7 +85,6 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      {/* Image Section */}
       <motion.div
         className="hero-image"
         initial={{ x: 50, opacity: 0 }}
